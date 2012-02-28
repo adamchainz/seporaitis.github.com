@@ -15,10 +15,9 @@ bear with me here - this idea has been crystalizing in my head for about a half
 year now, directly from experience with a different approach to things than I was 
 used to.
 
-Of course - if the post happened to be not boring and you happen to read it to the end
+Of course - if the post did not bore you, you happened to read it from A to Z
 and if you share the same or contradictory beliefs - I urge you to share them and
-raise a discussion. A healthy exchange of ideas is good to extend boundaries of 
-understanding.
+raise a discussion. 
 
 So, here goes...
 
