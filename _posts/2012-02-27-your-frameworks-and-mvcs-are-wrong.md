@@ -12,8 +12,8 @@ comments - I read them all.*
 
 Having this shouting title for my first post might look as an arrogant shot, but 
 bear with me here - this idea has been crystalizing in my head for about a half
-year now, directly from experience with a different approach to things that I
-will be talking about here.
+year now, directly from experience with a different approach to things than I was 
+used to.
 
 Of course - if the post happened to be not boring and you happen to read it to the end
 and if you share the same or contradictory beliefs - I urge you to share them and
