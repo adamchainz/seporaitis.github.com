@@ -25,7 +25,7 @@ So, here goes...
 
 They try to help me too much. One might see that as a good thing, but after working 
 with two now _mainstream_ PHP frameworks and checking out couple of others, I 
-noticed couple of things. 
+noticed few things. 
 
 Contrary to the "easy to use" slogans, shiny documentation and examples, frameworks do 
 not let me prototype things fast, unless I know them inside-out. And even if I know them
