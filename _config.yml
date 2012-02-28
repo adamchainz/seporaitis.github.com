@@ -16,7 +16,7 @@ author :
   email : julius@seporaitis.net
   github : seporaitis
   twitter : seporaitis
-  feedburner : feedname
+  feedburner : backend-lt
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -102,7 +102,7 @@ JB :
   analytics :
     provider : google
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-130302-4'
     getclicky :
       site_id : 
 
