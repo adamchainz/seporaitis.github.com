@@ -51,7 +51,7 @@ Adding/removing properties of the database schema, changing the controller
 logic is okay, but then you end up opening Model class, adding/removing parameters to 
 methods and changing various queries again and again. It fells unnatural to me now and 
 actually this came along unnoticed until I saw an approach disturbingly different 
-from what I was used to. I will try to elaborate on this in my next post, but to put it short -
+from what I was used to. I will elaborate on this in my next post, but to put it short -
 your data should be your model and not the model should constrain your data.
 
 ## Views are wrong
@@ -59,9 +59,9 @@ your data should be your model and not the model should constrain your data.
 A thing commonly known as The View does not do what it should. Correct me if I am wrong - 
 views are all about representing your data (model). Then why the spagheti of moustache 
 braces? Look at it in this perspective - your view should be, in one way or another, the 
-same data you have in your database, except that it was presented in the way the human eye 
+same data you have in your database, except that it is presented in the way the human eye 
 and mind could make sense of it. Lets call it The Transformation. And although they might
-seem as the same thing, they actualy are not.
+seem as the same thing, they are not.
 
 A View usually is a template with some placeholders to put the data into. A Transformation
 is [_a thorough dramatic change in form or appearance_](http://www.google.com/search?q=define:+transformation). 
