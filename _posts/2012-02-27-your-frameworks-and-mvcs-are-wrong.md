@@ -44,13 +44,13 @@ and not the way I might want to do it.
 
 During some of my latest projects I worked on, I had an awkward epiphany - Models 
 in MVC are _like a fifth foot on a dog_. Short explanation is - I always need to 
-come back and _fix_ it. Long explanation - requirements for (especially web) software 
-are not carved in stone, requirements and their changes directly mirror on to data. 
-Data that is represented by model code and controller logic. Naturally changes propagate 
-there as well. Adding/removing properties of the data in database, changing the controller 
+come back and _fix_ them. Long explanation - requirements for (especially web) software 
+are not carved in stone, their changes directly mirror on to data. 
+Meaning, that the data that is represented by model code and controller logic changes. 
+Adding/removing properties of the database schema, changing the controller 
 logic is okay, but then you end up opening Model class, adding/removing parameters to 
 methods and changing various queries again and again. It fells unnatural to me now and 
-actually this process came along unnoticed until I saw an approach disturbingly different 
+actually this came along unnoticed until I saw an approach disturbingly different 
 from what I was used to. I will try to elaborate on this in my next post, but to put it short -
 your data should be your model and not the model should constrain your data.
 
