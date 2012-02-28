@@ -1,86 +1,162 @@
 ---
 layout: post
-title: "Frameworks and MVCs are wrong"
-category: 
+title: "There is a problem with web frameworks"
 tags: [web]
 ---
 {% include JB/setup %}
 
-*__Disclaimer__: this is my first post after a two year _hibernation_, which did not
-help my communication skills. So you are very welcome to slap my writing style in 
-comments - I read them all.*
+This is an essay about my long time experience with a web framework
+ X. Names are not important, because ideas I will present you are
+ common among all major web frameworks nowadays. I will even dare to
+ say that MVC that is a de facto standard nowadays is a
+ [leaky abstraction](http://en.wikipedia.org/wiki/Leaky_abstraction). Sounds
+ scary, right? No worries - I will try to present you a possible
+ solution - a totally different way to do things, which actually
+ works. Well, at least there is one working example running in
+ production.
 
-Having this shouting title for my first post might look as an arrogant shot, but 
-bear with me here - this idea has been crystalizing in my head for about a half
-year now, directly from experience with a different approach to things than I was 
-used to.
+<!--more-->
 
-So, here goes...
+First things first. In the summer of 2011 I was working, among couple
+of other things, on a website called
+[Wulffmorgenthaler](http://wulffmorgenthaler.com). There is a
+different story behind the english version (just in case you have
+questions), but today I will concentrate on a Danish website and its
+internals. So, around the middle 2011, owner of the website decided to
+do rebranding - new website with a LOT of new kinds of content.
 
-## I have a problem with frameworks. 
+The old codebase was terrible piece of craftsmanship, part of which,
+sadly, involves me too. The rebreanding meant green light to a fresh
+start on the codebase. Oh boy, was I happy about it! No more dealing
+with [_Other People Code_](http://abstrusegoose.com/432) and also I
+was anxious to not repeat my previous mistakes and make my code even
+better.
 
-They try to help me too much. One might see that as a good thing, but after working 
-with two now _mainstream_ PHP frameworks and checking out couple of others, I 
-noticed few things. 
+At the same time there happened to be Symfony2 Beta. I haven't used
+Symfony before, but decided to take a look - especially as some of my
+good developer friends were buzzing about it. I downloaded the
+sandbox, read the documentation and some blog posts. Symfony2 looked
+as a fresh breeze after years with Zend Framework. I liked the
+structure of the code, I liked their approach to
+development/production environments and asset management. "I shall
+push to use it for our fresh start!" - I thought. Early adoption all
+the way.
 
-Contrary to the "easy to use" slogans, shiny documentation and examples, frameworks do 
-not let me prototype things fast, unless I know them inside-out. And even if I know them
-I am constrained to its limitations.
+But then again, I was not alone in this. We were three coders and I
+happened not to be a lead. I had a voice. Oh man, did I preached
+"Symfony2! Symfony2!", but the final word was in another mans hands.
 
-For example: Missing a feature? I can search for a piece of code written by another 
-great developer for that mutual purpose, and use it.  Nothing is wrong with that, but 
-from my own experience - piece of code does not fit every purpose well enough - it always 
-needs polishing to fit - be it a different code structure than your own or tiny bits of logic 
-or something else. On the other hand, I can write that missing piece myself. While I am 
-a fan of "do it yourself" _if understanding of the problem domain is good enough_, I am 
-bound to do this task in the way the framework authors intended framework to be extended 
-and not the way I might want to do it.
+The lead - Martynas, who had a long time and never ending interest
+about a technology called the
+[_Semantic Web_](http://en.wikipedia.org/wiki/Semantic_Web). And he
+deserves a credit, because of what happened in the upcoming
+months. So decision was made to use his approach and make any tools
+neccessary along the way (there isn't much for PHP anyways). Then -
+all hell break loose. I and another colleague, Aleksandras, loudly
+objected, argued, discussed, SHOUTED IN CAPS LOCK and so on. But
+decision was made and is future showed in the benefit of our own
+experience, code quality and a different look about things.
 
-## I have problem with MVC, especially M.
+The coding began... And during those months of development I saw that
+a there is a drastically different approach to do things. I will not
+lie - it took maybe three months to grasp all this myself. Sometimes I
+didn't even know what I was coding! Luckily, Martynas had a clear
+vision and lead us through, though there were still some discussions
+up until the end.
 
-During some of my latest projects I worked on, I had an awkward epiphany - Models 
-in MVC are _like a fifth foot on a dog_. Short explanation is - I always need to 
-come back and _fix_ them. Long explanation - requirements for (especially web) software 
-are not carved in stone, their changes directly mirror on to data. 
-Meaning, that the data that is represented by model code and controller logic changes. 
-Adding/removing properties of the database schema, changing the controller 
-logic is okay, but then you end up opening Model class, adding/removing parameters to 
-methods and changing various queries again and again. It fells unnatural to me now and 
-actually this came along unnoticed until I saw an approach disturbingly different 
-from what I was used to. I will elaborate on this in my next post, but to put it short -
-your data should be your model and not the model should constrain your data.
+So what did I grasp?
 
-## Views are wrong
+## I had a problem with frameworks.
 
-A thing commonly known as The View does not do what it should. Correct me if I am wrong - 
-views are all about representing your data (model). Then why the spagheti of moustache 
-braces? Look at it in this perspective - your view should be, in one way or another, the 
-same data you have in your database, except that it is presented in the way the human eye 
-and mind could make sense of it. Lets call it The Transformation. And although they might
-seem as the same thing, they are not.
+They try to help me too much. I started to hate them. _Why?_ is a good
+question. Here's an answer:
 
-A View usually is a template with some placeholders to put the data into. A Transformation
-is [_a thorough dramatic change in form or appearance_](http://www.google.com/search?q=define:+transformation). 
-First is like looking into something through a fancy key-hole, second is like seeing the 
-same thing, but in a way that is more viable to understand.
+Contrary to the "easy to learn" slogans, shiny documentation and easy
+examples, frameworks do not let me prototype things fast, unless I
+know them inside-out. And even if I do - I am constrained.
 
-Once again, this crazy _sounding_ idea enlightened me when I saw a way to deal things in
-a totally different way than I was used to.
+Consider this: a framework is missing a feature. There are two ways to
+solve this. I can search for a piece of code written for that mutual
+purpose by another great developer, and use it. But 9 out of 10 times
+that piece of code does not fit my exact needs - I will need to
+"polish" it. Or it fits my requirements, but the code structure is
+totally different. Or it has no tests, but _seems to work_. I might
+end up writing it myself, hopefuly if I understand the problem domain
+good enough, the code will be pretty good too. _However_, even in this
+case I am constrained. I am bound to structure my code in the way the
+framework authors intended the framework to be extended. What if I
+want to be a free spirit and do things my way if I know I will do them
+better?
+
+P.S. As I am writing this -
+["Linus Torvalds on C++"](http://harmful.cat-v.org/software/c++/linus)
+appeared on Hacker News. And I totally relate to his ideas, in a
+different domain though.
+
+## Models are _a fifth foot on a dog_.
+
+I have long since heard that
+[ORM is an anti-pattern](http://www.google.com/search?q=orm+antipattern)
+and I agree to that. But I always thought the problem is with
+implementations - no one created that _right one_ yet.
+
+But I was horrified at first when I came to a conclusion that Models
+in MVC are totally worthless piece of code. &lt;irony&gt;_They are
+needed only for bugs to hide somewhere._&lt;/irony&gt; This comes from
+experience that mostly I opened Model code to _fix_ something.
+
+Consider this mindflow: Requirements of (especially web) software are
+constantly changing and these changes mirror directly to on to the
+data structure. So when an unavoidable change to the data and logic
+arrives - you update them and in the end open up Model class,
+add/remove methods/parameters, changing various queries. It feels so
+unnatural that when you change your data, you have to change something
+_more_. This is a constraint on data. There is a better way.
+
+Your data should be your model - it should be self contained. Your
+code shouldn't bother about internal representation, rather -
+presentation. Which brings me to my next idea.
+
+## Views are impostors!
+
+Yes, Views do not do what they should. Views are all about
+representing your data. I was shocked again, when I grasped this.
+
+The View should be, in one way or another, the same data I have in my
+database, except that it is presented in the way the human eye and
+mind could make sense of it. What is a view then? An impostor! It
+mocks itself as the data, when actually it is a spaghetti of
+moustaches that allows to see only what you want to see, not what the
+data wants to tell you!
+
+But there is king in mask, hidden and forgotten somewhere in basement,
+hidden somewhere in the first year CS course (well, it was in my
+case). I call it The Transformation -
+[_a thorough dramatic change in form or appearance_](http://www.google.com/search?q=define:+transformation).
+
+Maybe it is hard to grasp the difference, but look at it in this
+metaphoric way: view is like looking into something through a fancy
+key-hole; transformation is like seeing the same thing but _presented_
+to you in a more understandable way.
 
 ## Putting it all together
 
-What do I want then? Healthy abstractions. A healthy abstractions of _things_ that I _have_. 
-And what _things_ do I _have_ in a web application backend?
+What do I want then from a framework? A _healthy abstractions_ of the
+low level stuff that I _need_ for a webapp. For example, I argue _now_
+(I wouldn't have believed half a year ago), that the most simplest
+abstractions needed for a website are:
 
-1. Request
-2. Response
-3. Resource
+1. _Request_ - something that comes from the client.
+2. _Response_ - something that goes back to the client.
+3. _Resource_ - the data.
 
-Simplest of things and hey! You of course noticed how they fit HTTP protocol! Now doesn't the commonly
-used MVC (or similar) abstraction seem unnatural fit/overengineering/unneccessary complexity?
+And indeed after months of work, last year, we finished the rebranded
+Danish entertainment website called
+[HeltNormalt](http://heltnormalt.dk/). Believe it or not, this website
+holds more than ten different types of content compared just to two in
+the old one. And behind the scenes there are those three things
+mentioned above with one additional:
 
-Please share your opinion and meanwhile I will write what _terrifying_ experience I had, that 
-changed my view so drastically and will try to reply to your comments.
+4. _Repository_ - a place to store, retrieve and update data.
 
-Thanks for reading!
-
+--- WORK IN PROGRESS ---
