@@ -39,7 +39,7 @@ do rebranding - new website with a LOT of new kinds of content.
 The old codebase was terrible piece of craftsmanship, part of which,
 sadly, involves me too. The rebranding meant green light to a fresh
 start on the codebase. Oh boy, was I happy about it! No more whining
-about [_Other Peoples Code_](http://abstrusegoose.com/432) and also I
+about [_Other People Code_](http://abstrusegoose.com/432) and also I
 was anxious to not repeat my past mistakes and make my code even
 better this time.
 
