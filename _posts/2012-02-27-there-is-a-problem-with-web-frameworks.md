@@ -190,7 +190,8 @@ The Model/Query difference mainly comes form our ORM - we used Propel,
 which generated a lot of code. You might ask what's the _Query_ thing?
 Well, we don't have models - but we do query the data. The point is,
 that because our data is self contained, we only need to query for the
-_stuff_ (properties) that we need.
+_stuff_ (properties) that we need - no need for describing the data as
+Models do.
 
 ## Putting it all together (IRL).
 
