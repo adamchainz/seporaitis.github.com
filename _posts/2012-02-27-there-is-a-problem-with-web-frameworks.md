@@ -358,7 +358,7 @@ Although we do spend some hours per week improving it - more hands and
 minds are always better, so if you feel interested - don't hesitate!
 Try it out and contribute, we will be there for you on our Github
 account, I also will try to write more about it on this new and shiny
-blog and you can always drop an email for me or directly to info@graphity.org
+blog and you can always drop an email for me directly or info@graphity.org
 
 What are your thoughts on this - let's talk in comments!
 
