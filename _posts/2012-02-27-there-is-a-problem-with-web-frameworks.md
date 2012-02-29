@@ -10,8 +10,10 @@ completely different from what currently web frameworks (at least PHP)
 are offering. I will dare to say that they all are flawed and then
 present you one way that this could be fixed and will boast a little,
 that this way was presented at one of W3C workshops for guys from W3C,
-IBM, Nokia, Oracle and others. This post is long, but I hope you will
-enjoy reading it as much as I enjoyed writing it!
+IBM, Nokia, Oracle and others. It is also available for you to try out
+as an open source project. Although this post is long, I hope you
+won't be frightened by that and enjoy reading it as much as I enjoyed
+writing it!
 
 <!--more-->
 
