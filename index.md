@@ -11,7 +11,7 @@ title: Backend.LT by Julius 'Sepa' Šėporaitis
             <div id="post">
                 <h1>{{ first_post.title }}</h1>
                 <p class="meta">{{ first_post.date | date_to_string }}</p>
-                <p> {{ first_post.preview }} </p>
+                <p> {{ first_post.content | preview }} </p>
                 <a id="more" href="{{ first_post.url }}">Continue reading&raquo;</a>
             </div>
         </li>
@@ -24,4 +24,3 @@ title: Backend.LT by Julius 'Sepa' Šėporaitis
         {% endfor %}
     </ul>
 </div>
-
