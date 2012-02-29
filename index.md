@@ -12,7 +12,7 @@ title: Backend.LT by Julius 'Sepa' Šėporaitis
                 <h1>{{ first_post.title }}</h1>
                 <p class="meta">{{ first_post.date | date_to_string }}</p>
                 <p> {{ first_post.content | preview }} </p>
-                <a id="more" href="{{ first_post.url }}">Continue reading&raquo;</a>
+                <a id="more" href="{{ first_post.url }}#disqus">Discuss&raquo;</a>
             </div>
         </li>
     </ul>
