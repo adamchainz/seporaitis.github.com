@@ -31,8 +31,8 @@ First things first. In the summer of 2011 I was working, among couple
 of other things, on a website called
 [Wulffmorgenthaler](http://wulffmorgenthaler.com). There is a
 different story behind the english version (just in case you have
-questions), but today I will concentrate on a Danish website and its 
-successor - [HeltNormalt](http://heltnormalt.dk). So, around the 
+questions), but today I will concentrate on a Danish website and its
+successor - [HeltNormalt](http://heltnormalt.dk). So, around the
 middle 2011, owner of the website decided to
 do rebranding - new website with a LOT of new kinds of content.
 
@@ -118,17 +118,17 @@ needed only for bugs to hide somewhere._&lt;/irony&gt; This comes from
 experience that mostly I opened Model code to _fix_ something.
 
 Consider this mindflow: Requirements of (especially web) software are
-constantly changing and these changes mirror directly to on to the
+constantly changing and these changes mirror directly on to the
 data structure. So when an unavoidable change to the data and logic
 arrives - you update them and in the end open up Model class,
-add/remove methods/parameters, change various queries to use those 
-methods/parameters. It feels so unnatural that when you change your 
-data and your queries, you have to change something _more_. This is a 
+add/remove methods/parameters, change various queries to use those
+methods/parameters. It feels so unnatural that when you change your
+data and your queries, you have to change something _more_. This is a
 constraint on data. There is a better way.
 
 Your data should be your model - it should be self contained. Your
-code shouldn't bother about internal representation, rather -
-presentation. Which brings me to my next idea.
+code shouldn't bother about internal representation, rather it should
+care about data transformation. Which brings me to my next idea.
 
 ## Views are impostors!
 
@@ -136,26 +136,26 @@ Yes, Views do not do what they should. Views are all about
 representing your data. I was shocked again, when I grasped this.
 
 The view should be, in one way or another, the same data I have in my
-database, except that it is presented in the way the human eye or a 
+database, except that it is presented in the way the human eye or a
 browser script, could make sense of it. Now the commonly known View
 mocks itself as the data, when actually it is a spaghetti of
 moustaches that shows only what you allowed yourself to see, not what the
 data wants to tell you!
 
-But there is a man in the mask, hidden and forgotten somewhere in 
-basement, I call it The Transformation -
+But then there is The Transformation -
 [_a thorough dramatic change in form or appearance_](http://www.google.com/search?q=define:+transformation).
 
 Maybe it is hard to grasp the difference, but look at it in this
 metaphoric way: view is like looking into something through a fancy
 key-hole; transformation is like seeing the same thing but _presented_
-to you in a more understandable way.
+to you or a script (as in JSON) in a more understandable way at any
+given moment.
 
 ## How it should work.
 
-What do I want then from a framework? A _healthy abstractions_ of the
+What do I want from a framework, then? A _healthy abstractions_ of the
 low level stuff that I _need_ for a webapp. For example, I argue _now_
-(I wouldn't have believed half a year ago), that the most simplest
+(I wouldn't have believed a year ago), that the most simplest
 abstractions needed for a website are:
 
 1. _Request_ - something that comes from the client.
@@ -184,13 +184,15 @@ one, LOC: 614.
 * Zend Framework behind old website, LOC: tens of thousands _vs_ Our
   framework (Graphity), LOC: ~5000.
 
-The Model difference mainly comes form our ORM - we used Propel, which
-generated a lot of code. You might ask what's the _Query_ thing? Well,
-we don't have models - but we do query the data. The point is, that
-because our data is self contained , we only need to query for the
+Less code - less bugs.
+
+The Model/Query difference mainly comes form our ORM - we used Propel,
+which generated a lot of code. You might ask what's the _Query_ thing?
+Well, we don't have models - but we do query the data. The point is,
+that because our data is self contained, we only need to query for the
 _stuff_ (properties) that we need.
 
-## Puttingit all together (IRL).
+## Putting it all together (IRL).
 
 Without diving deeply into what
 [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) and
@@ -219,23 +221,23 @@ link to another Resource) or a string.
 Remember, how I wrote that we don't need Models, because our data is
 self-contained? This is what I meant.
 
-P.S. This is a very helpful thing called
-[Turtle syntax](http://en.wikipedia.org/wiki/Turtle_(syntax)) actual
-data is in RDF/XML.
+P.S. The snippet above is a very helpful thing called
+[Turtle syntax](http://en.wikipedia.org/wiki/Turtle_(syntax)), though
+simplified here. Actual data is in RDF/XML.
 
 _Queries_
 
-Now as we don't have Models as such, we still need to get our data
+Now as we don't have Models and ORM as such, we still need to get our data
 somehow. So imagine above triples as a graph - in the center there is
 a resource with edges going out (properties). On the other part of the
 edge there is a value - a string, or (surprise surprise) another
-resource like this one. Now imagine hundreds of resources linked this
+resource linked to this one. Now imagine hundreds of resources linked this
 way. A web of _linked data_.
 
-How do you retrieve information from this graph? By pattern matching!
-In the query you say that you want to get some triples with some
-properties and values, and say where are the blanks that should be
-filled up in results. Sounds vague, but here's an example:
+How do you retrieve information from this graph? By a thing similar to
+pattern matching! In the query you say that you want to get some
+triples with some properties and values, and leave some blanks that
+should be filled up in results. Sounds vague, but here's an example:
 
     CONSTRUCT {
         ?uri type Post .
@@ -275,8 +277,9 @@ for XML. The [XSLT](http://en.wikipedia.org/wiki/XSLT). I won't dive
 into XSLT, the Wikipedia article has some examples, but suffice to say
 that we can represent our data in any way we want - HTML, XML, JSON,
 Plain Text, etc. just by using different XSL stylesheets. We could
-generate even valid SQL dump to import into MySQL database, but
-seriously - we don't want to do that. :-) (But we did the opposite!)
+even generate a valid SQL dump to import into MySQL database, but
+seriously - we don't want to do that. :-) (But we did an exact
+opposite! We had to import old data.)
 
 ## Embrace the Open Source version of this!
 
@@ -286,42 +289,46 @@ open-source framework. Behold fellow hackers - The
 [Graphity](http://github.com/graphity/graphity-core).
 
 At the end of the process, we felt that we did not invent anything new
-- we just reused what was always there. So sometimes we like to call
-Graphity not a Framework, but instead - an Architecture! In theory
-this approach should work in any language that is widely used in web
-development today. Martynas has a working Java version of the same
-thing, slightly more sophisticated because Java already has some
-packages to work with _linked data_/_semantic web_, so he did not need
-to write everything from scratch as in PHP version. Python? Ruby? I
-hope there will be version for those languages, and others, too!
+- we just reused what was always there, but hidden. So sometimes we
+like to call Graphity not a Framework, but instead - an Architecture!
+In theory this approach should work in any language that is widely
+used in web development today. Martynas has a working Java version of
+the same thing, slightly more sophisticated because Java already has
+some packages to work with _linked data_ / _semantic web_, so he did
+not need to write everything from scratch as in PHP version. Python?
+Ruby?  I hope there will be a version for those languages, and others,
+too!
 
 Oh, and by the way, you might be puzzled - where to store the
 data when you play with Graphity? Well, I happen to know one SaaS company,
 [Dydra](http://dydra.com/) - just register and use it. In fact we did
 and, oh boy!, how friendly and helpful they were all through the
-process! A perfect example for me how customer care should look like.
+process! A perfect example for me how customer care should look
+like. Seriously, check them out.
 
 ## Adventures at M.I.T. and a paper about Graphity.
 
 In fall 2011 Martynas found a call for participation in a
 [Linked Enterprise Data Patterns Workshop](http://www.w3.org/2011/09/LinkedData/)
-and we should try to enter this event, by writing a short paper about
-why we should be selected to participate in this event.
+and said we should try to enter this event, by writing a short paper
+about what we did and how and how this could benefit the Semantic Web
+movement.
 
 We did write the paper, we were accepted, and in early December flied
-over _The Pond_ to Boston, MA to do a presentation! Our presentation
-looked a little bit off (a Danish entertainment company website) among
-grands like: IBM, Nokia, Oracle, just to name a few! Hey, but who
-cares about being a little bit off, when sitting next to
-[Tim Berners-Lee](http://en.wikipedia.org/wiki/Tim_Berners-Lee), who
-gave an excursion around MIT Strate Center, after the first day of the
-workshop.
+over _The Pond_ to Boston, MA to do a presentation! Actually, then I
+felt that our presentation looked a little bit off (a Danish
+entertainment company website) among enterprise grands like: IBM,
+Nokia, Oracle, just to name a few! But then again, but who cares about
+being a little bit off, when sitting next to
+[Tim Berners-Lee](http://en.wikipedia.org/wiki/Tim_Berners-Lee) and
+listening to other bunch of great people talking about this great
+technology and drafting the guidelines for it's future.
 
 If someone had told me couple of years ago: "Dude, you gonna visit MIT
 and present your stuff to TBL." - I would have slapped that someone
-and said "Wake up!" :-) Amazing experience.
+and said "Wake up!" :-) That how unbelievable it looked like.
 
-If you are interested in the paper we prepared, it has more
+If you are interested in the paper we wrote, it has more
 comparative information how this approach differs from todays common
 practice in web development. Read it here:
 [_"Graphity - A Generic Linked Data Framework"_](http://graphity.github.com/position_paper.pdf).
@@ -338,8 +345,8 @@ Although we do spend some hours per week improving it - more hands and
 minds are always better, so if you feel interested - don't hesitate!
 Try it out and contribute, we will be there for you on our Github
 account, I also will try to write more about it on this new and shiny
-blog in the future.
+blog and you can always drop an email for me or directly to info@graphity.org
 
-Talk to you on the next post and in comments!
+What are your thoughts on this - let's talk in comments!
 
 The End :-)
