@@ -314,8 +314,8 @@ too!
 Oh, and by the way, you might be puzzled - where to store the data if
 you decide to play with Graphity? Well, I happen to know one SaaS
 company, [Dydra](http://dydra.com/) - just register and use it. In
-fact we did and, oh boy!, how friendly and helpful they were all
-through the process of putting HeltNormalt on top of it! A perfect
+fact we did and, oh boy!, how friendly and helpful they were
+through the process of developing HeltNormalt! A perfect
 example for me how customer care should look like. Seriously, check
 them out.
 
