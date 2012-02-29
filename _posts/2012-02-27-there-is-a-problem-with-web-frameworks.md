@@ -223,7 +223,7 @@ Remember, how I wrote that we don't need Models, because our data is
 self-contained? This is what I meant.
 
 P.S. The snippet above is a very helpful thing called
-[Turtle syntax](http://en.wikipedia.org/wiki/Turtle_(syntax)), though
+[Turtle syntax]( http://en.wikipedia.org/wiki/Turtle_(syntax) ), though
 simplified here. Actual data is in RDF/XML.
 
 _Queries_
@@ -281,6 +281,17 @@ Plain Text, etc. just by using different XSL stylesheets. We could
 even generate a valid SQL dump to import into MySQL database, but
 seriously - we don't want to do that. :-) (But we did an exact
 opposite! We had to import old data.)
+
+That's one of the greatest outcomes of all this - logic is stripped
+down (but still there is some logic), what's left for you is XML
+transformations. The thing is you greatly reduce a chance of bug -
+your data can be incorrect but can not contain bugs or be invalid (as
+long as validation in datastore works correctly). And surprisingly we
+had issues when some properties were missing in resource - nothing
+broke, we had our XSLTs set up in way that just the part where that
+property value should be shown - it was not shown. No ifs, no template
+logic. And you get this pretty much by default if you use XSLT
+correct.
 
 ## Embrace the Open Source version of this!
 
