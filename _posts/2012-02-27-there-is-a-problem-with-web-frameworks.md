@@ -27,8 +27,6 @@ made [Graphity](http://github.com/graphity/graphity-core). Read our
 position paper for W3C workshop
 [here](http://graphity.github.com/position_paper.pdf)._
 
-But still, I hope you'll read it. You should. :-)
-
 First things first. In the summer of 2011 I was working, among couple
 of other things, on a website called
 [Wulffmorgenthaler](http://wulffmorgenthaler.com). There is a
