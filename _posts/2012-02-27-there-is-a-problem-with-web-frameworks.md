@@ -311,12 +311,13 @@ not need to write everything from scratch as in PHP version. Python?
 Ruby?  I hope there will be a version for those languages, and others,
 too!
 
-Oh, and by the way, you might be puzzled - where to store the
-data if you decide to play with Graphity? Well, I happen to know one SaaS company,
-[Dydra](http://dydra.com/) - just register and use it. In fact we did
-and, oh boy!, how friendly and helpful they were all through the
-process! A perfect example for me how customer care should look
-like. Seriously, check them out.
+Oh, and by the way, you might be puzzled - where to store the data if
+you decide to play with Graphity? Well, I happen to know one SaaS
+company, [Dydra](http://dydra.com/) - just register and use it. In
+fact we did and, oh boy!, how friendly and helpful they were all
+through the process of putting HeltNormalt on top of it! A perfect
+example for me how customer care should look like. Seriously, check
+them out.
 
 ## Adventures at M.I.T. and a paper about Graphity.
 
