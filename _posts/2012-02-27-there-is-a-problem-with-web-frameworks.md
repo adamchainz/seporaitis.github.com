@@ -327,7 +327,7 @@ and said we should try to enter this event, by writing a short paper
 about what we did and how and how this could benefit the Semantic Web
 movement.
 
-We did write the paper, we were accepted, and in early December flied
+We did write the paper, we were accepted, and in early December flew
 over _The Pond_ to Boston, MA to do a presentation! Actually, then I
 felt that our presentation looked a little bit off (a Danish
 entertainment company website) among enterprise grands like: IBM,
