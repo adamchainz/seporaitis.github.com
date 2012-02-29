@@ -348,7 +348,7 @@ practice in web development. Read it here:
 
 ## We invite you to collaborate!
 
-I hope someone is still reading this :-) This is the most important part
+I hope someone endured up until here :-) This is the most important part
 actually!
 
 We truly believe in Graphity, but as our ways with HeltNormalt have
