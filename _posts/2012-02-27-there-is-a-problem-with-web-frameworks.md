@@ -31,8 +31,9 @@ First things first. In the summer of 2011 I was working, among couple
 of other things, on a website called
 [Wulffmorgenthaler](http://wulffmorgenthaler.com). There is a
 different story behind the english version (just in case you have
-questions), but today I will concentrate on a Danish website and its
-internals. So, around the middle 2011, owner of the website decided to
+questions), but today I will concentrate on a Danish website and its 
+successor - [HeltNormalt](http://heltnormalt.dk). So, around the 
+middle 2011, owner of the website decided to
 do rebranding - new website with a LOT of new kinds of content.
 
 The old codebase was terrible piece of craftsmanship, part of which,
@@ -61,14 +62,14 @@ about a technology called the
 [_Semantic Web_](http://en.wikipedia.org/wiki/Semantic_Web). And he
 deserves a credit, because of what happened in the upcoming
 months. So decision was made to use his approach and make any tools
-neccessary along the way (there isn't much for PHP anyways). Then -
+neccessary along the way (there isn't much of them for PHP anyways). Then -
 all hell break loose. I and another colleague, Aleksandras, loudly
 objected, argued, discussed, SHOUTED IN CAPS LOCK and so on. But
-decision was made and is future showed in the benefit of our own
-experience, code quality and a different look about things.
+decision was immovable and as future showed - in the benefit of our own
+experience, code quality and a different perspective about things.
 
 The coding began... And during those months of development I saw that
-a there is a drastically different approach to do things. I will not
+there is a drastically different approach to do things. I will not
 lie - it took maybe three months to grasp all this myself. Sometimes I
 didn't even know what I was coding! Luckily, Martynas had a clear
 vision and lead us through, though there were still some discussions
@@ -78,8 +79,8 @@ So what did I grasp?
 
 ## I had a problem with frameworks.
 
-They try to help me too much. I started to hate them. _Why?_ is a good
-question. Here's an answer:
+They try to help me too much. I started to hate the idea of using any MVC
+Based framework. _Why?_ is a good question. Here's an answer:
 
 Contrary to the "easy to learn" slogans, shiny documentation and easy
 examples, frameworks do not let me prototype things fast, unless I
@@ -90,7 +91,7 @@ solve this. I can search for a piece of code written for that mutual
 purpose by another great developer, and use it. But 9 out of 10 times
 that piece of code does not fit my exact needs - I will need to
 "polish" it. Or it fits my requirements, but the code structure is
-totally different. Or it has no tests, but _seems to work_. I might
+totally different. Or it has no tests, but _seem to work_. I might
 end up writing it myself, hopefuly if I understand the problem domain
 good enough, the code will be pretty good too. _However_, even in this
 case I am constrained. I am bound to structure my code in the way the
@@ -120,9 +121,10 @@ Consider this mindflow: Requirements of (especially web) software are
 constantly changing and these changes mirror directly to on to the
 data structure. So when an unavoidable change to the data and logic
 arrives - you update them and in the end open up Model class,
-add/remove methods/parameters, changing various queries. It feels so
-unnatural that when you change your data, you have to change something
-_more_. This is a constraint on data. There is a better way.
+add/remove methods/parameters, change various queries to use those 
+methods/parameters. It feels so unnatural that when you change your 
+data and your queries, you have to change something _more_. This is a 
+constraint on data. There is a better way.
 
 Your data should be your model - it should be self contained. Your
 code shouldn't bother about internal representation, rather -
@@ -133,16 +135,15 @@ presentation. Which brings me to my next idea.
 Yes, Views do not do what they should. Views are all about
 representing your data. I was shocked again, when I grasped this.
 
-The View should be, in one way or another, the same data I have in my
-database, except that it is presented in the way the human eye and
-mind could make sense of it. What is a view then? An impostor! It
+The view should be, in one way or another, the same data I have in my
+database, except that it is presented in the way the human eye or a 
+browser script, could make sense of it. Now the commonly known View
 mocks itself as the data, when actually it is a spaghetti of
-moustaches that allows to see only what you want to see, not what the
+moustaches that shows only what you allowed yourself to see, not what the
 data wants to tell you!
 
-But there is king in mask, hidden and forgotten somewhere in basement,
-hidden somewhere in the first year CS course (well, it was in my
-case). I call it The Transformation -
+But there is a man in the mask, hidden and forgotten somewhere in 
+basement, I call it The Transformation -
 [_a thorough dramatic change in form or appearance_](http://www.google.com/search?q=define:+transformation).
 
 Maybe it is hard to grasp the difference, but look at it in this
