@@ -9,7 +9,7 @@ title: Backend.LT by Julius 'Sepa' Šėporaitis
         {% assign first_post = site.posts.first %}
         <li>
             <div id="post">
-                <h1>{{ first_post.title }}</h1>
+                <h1><a href="{{ first_post.url }}">{{ first_post.title }}</a></h1>
                 <p class="meta">{{ first_post.date | date_to_string }}</p>
                 <p> {{ first_post.content | preview }} </p>
                 <a id="more" href="{{ first_post.url }}#disqus">Discuss&raquo;</a>
