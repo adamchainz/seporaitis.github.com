@@ -23,8 +23,8 @@ _TL;DR. Frameworks are bad because of
 [object-relational impedance mismatch](http://en.wikipedia.org/wiki/Object-relational_impedance_mismatch)
 and
 [leaky abstractions](http://en.wikipedia.org/wiki/Leaky_abstraction). We
-made [Graphity](http://github.com/graphity/graphity-core). Read our
-position paper for W3C workshop
+made [Graphity](http://github.com/graphity/graphity-core) - an
+open-source project. Read our position paper for W3C workshop
 [here](http://graphity.github.com/position_paper.pdf)._
 
 First things first. In the summer of 2011 I was working, among couple
