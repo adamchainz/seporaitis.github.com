@@ -331,7 +331,7 @@ We did write the paper, we were accepted, and in early December flew
 over _The Pond_ to Boston, MA to do a presentation! Actually, then I
 felt that our presentation looked a little bit off (a Danish
 entertainment company website) among enterprise grands like: IBM,
-Nokia, Oracle, just to name a few! But then again, but who cares about
+Nokia, Oracle, just to name a few! But then again, who cares about
 being a little bit off, when sitting next to
 [Tim Berners-Lee](http://en.wikipedia.org/wiki/Tim_Berners-Lee) and
 listening to other bunch of great people talking about this great
