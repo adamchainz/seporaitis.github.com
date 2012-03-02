@@ -5,14 +5,14 @@ tags: [web]
 ---
 {% include JB/setup %}
 
-This is an essay about my experience with a new way to build websites,
-completely different from what currently web frameworks (at least PHP)
-are offering. I will dare to say that they all are flawed and then
-present you one way that this could be fixed and will boast a little,
+This is an essay about a new way to build websites, a way
+completely different from what currently web frameworks (at least PHP) offer.
+I will dare to say that they all are flawed and then
+present you one way that to fix the problem, and will boast a little,
 that this way was presented at one of W3C workshops for guys from W3C,
-IBM, Nokia, Oracle and others. It is also available for you to try out
+IBM, Nokia, Oracle and others. The way is also available for you to try out,
 as an open source project. Although this post is long, I hope you
-won't be frightened by that and enjoy reading it as much as I enjoyed
+won't be frightened by that and will enjoy reading it as much as I enjoyed
 writing it!
 
 <!--more-->
@@ -33,65 +33,64 @@ of other things, on a website called
 different story behind the english version (just in case you have
 questions), but today I will concentrate on a Danish website and its
 successor - [HeltNormalt](http://heltnormalt.dk). So, around the
-middle 2011, owner of the website decided to
+middle 2011, the owner of the website decided to
 do rebranding - new website with a LOT of new kinds of content.
-
-The old codebase was terrible piece of craftsmanship, part of which,
-sadly, involves me too. The rebranding meant green light to a fresh
+Its old codebase was terrible piece of craftsmanship, part of which,
+sadly, involves me too, but the rebranding meant a green light to a fresh
 start on the codebase. Oh boy, was I happy about it! No more whining
-about [_Other People Code_](http://abstrusegoose.com/432) and also I
+about [_Other People's Code_](http://abstrusegoose.com/432) and also I
 was anxious to not repeat my past mistakes and make my code even
 better this time.
 
-At the same time there happened to be Symfony2 Beta. I haven't used
-Symfony before, but decided to take a look - especially as some of my
+At the same time there happened to be Symfony2 Beta. I had not used
+Symfony, but decided to take a look - especially as some of my
 good developer friends were buzzing about it. I downloaded the
 sandbox, read the documentation and some blog posts. Symfony2 looked
 as a fresh breeze after years with Zend Framework. I liked the
 structure of the code, I liked their approach to
-development/production environments and asset management. "I shall
-push to use it for our fresh start!" - I thought. Early adoption all
+development/production environments and asset management. I thought, "I shall
+push to use it for our fresh start!". Early adoption all
 the way.
 
-But then again, I was not alone in this. We were three coders and I
-happened not to be a lead. I had a voice. Oh man, did I preached
-"Symfony2! Symfony2!", but the final word was in another mans hands.
+But then again, I was not in this alone. We were three coders and while I
+happened not to be a lead, I did have a voice. Oh man, did I preach
+"Symfony2! Symfony2!", but the final word was in other hands.
 
-The lead - Martynas, who had a long time and never ending interest
-about a technology called the
-[_Semantic Web_](http://en.wikipedia.org/wiki/Semantic_Web). And he
-deserves a credit, because of what happened in the upcoming
-months. So decision was made to use his approach and make any tools
-neccessary along the way (there isn't much of them for PHP anyways). Then -
-all hell break loose. I and another colleague, Aleksandras, loudly
-objected, argued, discussed, SHOUTED IN CAPS LOCK and so on. But
-decision was immovable and as future showed - in the benefit of our own
-experience, code quality and a different perspective about things.
+The lead - Martynas, had a long time and never ending interest
+in a technology called the
+[_Semantic Web_](http://en.wikipedia.org/wiki/Semantic_Web). He
+deserves credit, for what happened in the following
+months. So the decision was made, to use his approach and make any tools
+neccessary along the way (there was not much of them for PHP anyway). Then -
+all hell break loose. I and another colleague, Aleksandras, both loudly
+objected, argued, discussed, SHOUTED IN CAPS LOCK and so on. But the
+decision was immovable and as the future showed - it was to the benefit of our own
+experience, the code quality and a different perspective about things.
 
 The coding began... And during those months of development I saw that
-there is a drastically different approach to do things. I will not
+there is a drastically different approach to do things. I do not
 lie - it took maybe three months to grasp all this myself. Sometimes I
 didn't even know what I was coding! Luckily, Martynas had a clear
 vision and lead us through, though there were still some discussions
 up until the end.
 
-So what did I grasp?
+So, what did I grasp?
 
-## I had a problem with frameworks.
+## There is a problem with frameworks, because
 
 They try to help me too much. I started to hate the idea of using any MVC
 Based framework. _Why?_ is a good question. Here's an answer:
 
 Contrary to the "easy to learn" slogans, shiny documentation and easy
 examples, frameworks do not let me prototype things fast, unless I
-know them inside-out. And even if I do - I am constrained.
+know them inside-out. And even if I am expert, I am constrained.
 
 Consider this: a framework is missing a feature. There are two ways to
 solve this. I can search for a piece of code written for that mutual
-purpose by another great developer, and use it. But 9 out of 10 times
+purpose by another great developer, and use it. But, 9 out of 10 times
 that piece of code does not fit my exact needs - I will need to
-"polish" it. Or it fits my requirements, but the code structure is
-totally different. Or it has no tests, but _seem to work_. I might
+"polish" it. Or, it fits my requirements, but the code structure is
+totally different. Or, it has no tests, but _seems to work_. I might
 end up writing it myself, hopefuly if I understand the problem domain
 good enough, the code will be pretty good too. _However_, even in this
 case I am constrained. I am bound to structure my code in the way the
@@ -105,24 +104,23 @@ appeared on Hacker News. And I totally relate to his ideas, in a
 different domain though.
 
 
-## Models are _a fifth foot on a dog_.
+## models are _a fifth foot on a dog_, and
 
 I have long since heard that
 [ORM is an anti-pattern](http://www.google.com/search?q=orm+antipattern)
-and I agree to that. But I always thought the problem is with
-implementations - no one created that _right one_ yet.
-
-But I was horrified at first when I came to a conclusion that Models
+and I agree with that. But I had always thought the problem is with
+implementations - no one created that _right one_ yet. Now i have
+come to the horrifying conclusion, that Models
 in MVC are totally worthless piece of code. &lt;irony&gt;_They are
-needed only for bugs to hide somewhere._&lt;/irony&gt; This comes from
-experience that mostly I opened Model code to _fix_ something.
+needed only for bugs to hide somewhere._&lt;/irony&gt; This comes from realizing,
+that mostly I opened Model code to _fix_ something.
 
 Consider this mindflow: Requirements of (especially web) software are
-constantly changing and these changes mirror directly on to the
-data structure. So when an unavoidable change to the data and logic
-arrives - you update them and in the end open up Model class,
+constantly changing and these changes mirror directly onto the
+data structure. When an unavoidable change to the data and logic
+arrives, you update them and in the end open up Model class,
 add/remove methods/parameters, change various queries to use those
-methods/parameters. It feels so unnatural that when you change your
+methods/parameters. It feels so unnatural, that when you change your
 data and your queries, you have to change something _more_. This is a
 constraint on data. There is a better way.
 
@@ -130,50 +128,47 @@ Your data should be your model - it should be self contained. Your
 code shouldn't bother about internal representation, rather it should
 care about data transformation. Which brings me to my next idea.
 
-## Views are impostors!
+## views are impostors!
 
 Yes, Views do not do what they should. Views are all about
-representing your data. I was shocked again, when I grasped this.
+representing your data. When I grasped this, I was shocked yet again.
 
 The view should be, in one way or another, the same data I have in my
 database, except that it is presented in the way the human eye or a
-browser script, could make sense of it. Now the commonly known View
+browser script could make sense of it. Now the commonly known View
 mocks itself as the data, when actually it is a spaghetti of
 moustaches that shows only what you allowed yourself to see, not what the
 data wants to tell you!
 
-But then there is The Transformation -
+The alternative is The Transformation -
 [_a thorough dramatic change in form or appearance_](http://www.google.com/search?q=define:+transformation).
 
-Maybe it is hard to grasp the difference, but look at it in this
-metaphoric way: view is like looking into something through a fancy
-key-hole; transformation is like seeing the same thing but _presented_
-to you or a script (as in JSON) in a more understandable way at any
-given moment.
+Maybe it is hard to grasp the difference, but consider this
+metaphor: a view is like looking into something through a fancy
+key-hole; transformation is like seeing the same thing _presented_
+to you or to a script (as in JSON)  at any
+given moment in a more understandable way.
 
 ## How it should work.
 
-What do I want from a framework, then? A _healthy abstractions_ of the
-low level stuff that I _need_ for a webapp. For example, I argue _now_
-(I wouldn't have believed a year ago), that the most simplest
+What do I want from a framework, then? Primarily, _healthy abstractions_ of the
+low level stuff that I _need_ for a webapp. For example, I _now_ argue
+(I wouldn't have believed a year ago), that the simplest
 abstractions needed for a website are:
 
 1. _Request_ - something that comes from the client.
 2. _Response_ - something that goes back to the client.
-3. _Resource_ - the data
+3. _Resource_ - the data.
 4. _Repository_ - a place to store, retrieve and update _Resources_.
 
 Do you see the difference? Instead of hiding the low-level stuff that
 modern frameworks tend to hide, we embraced it!
-
-And indeed after months of work, last year, we finished the rebranded
+Indeed, last year, after months of work, when we finished the rebranded
 Danish entertainment website called
-[HeltNormalt](http://heltnormalt.dk/). And behind the scenes, there
-are those four things. Believe it or not, this website
-holds more than ten different types of content compared just to two in
-the old one.
-
-To make this more impressive, here are some statistics about code:
+[HeltNormalt](http://heltnormalt.dk/), there
+are just those four things behind the scenes. Yet, believe it or not, the new website
+holds more than ten different types of content compared to just two in
+the old one. Here are some statistics about code:
 
 * Controller code in the old website, LOC (Lines-of-Code): 7625 _vs_ Resource code in new one,
 LOC: 652.
@@ -184,27 +179,28 @@ one, LOC: 614.
 * Zend Framework behind old website, LOC: tens of thousands _vs_ Our
   framework (Graphity), LOC: ~5000.
 
-Less code - less bugs.
+Less code - fewer bugs.
 
-The Model/Query difference mainly comes form our ORM - we used Propel,
-which generated a lot of code. You might ask what's the _Query_ thing?
+The Model/Query difference comes mainly from our ORM. we used Propel,
+which generated a lot of code. You might ask, what's the _Query_ thing?
 Well, we don't have models - but we do query the data. The point is,
-that because our data is self contained, we only need to query for the
-_stuff_ (properties) that we need - no need for describing the data as
-Models do.
+because our data is autonomous, we need only to query for the
+_stuff_ (properties) that we need. We need not describe the data as
+Models.
 
 ## Putting it all together (IRL).
 
-Without diving deeply into what
+Let me explain how it
+all works _in real life_, on the [HeltNormalt](http://heltnormalt.dk/) website,
+without diving deeply into what
 [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) and
 [SPARQL](http://en.wikipedia.org/wiki/SPARQL) (the Semantic Web
-technologies, behind the scenes) let me explain how it
-all works _in real life_, [HeltNormalt](http://heltnormalt.dk/) website.
+technologies, behind the scenes)
 
 _Resources_
 
-Every resource in our datastore is combined of a number of triples - a
-Resource URI, a property name and a value. For simplicity sake, a
+Every resource in our datastore is comprises a number of triples, each of which is a
+Resource URI, a property name, and a value. For simplicity sake, a
 heavily striped down version of a resource looks like this:
 
     @base <http://heltnormalt.dk>
@@ -228,7 +224,7 @@ simplified here. Actual data is in RDF/XML.
 
 _Queries_
 
-Now as we don't have Models and ORM as such, we still need to get our data
+Now, as we don't have Models and ORM as such, we still need to get our data
 somehow. So imagine above triples as a graph - in the center there is
 a resource with edges going out (properties). On the other part of the
 edge there is a value - a string, or (surprise surprise) another
@@ -284,14 +280,14 @@ opposite! We had to import old data.)
 
 That's one of the greatest outcomes of all this - logic is stripped
 down (but still there is some logic), what's left for you is XML
-transformations. The thing is you greatly reduce a chance of bug -
+transformations. The thing is, you greatly reduce a chance of bug -
 your data can be incorrect but can not contain bugs or be invalid (as
-long as validation in datastore works correctly). And surprisingly we
-had issues when some properties were missing in resource - nothing
+long as validation in datastore works correctly). And when we did have
+had issues when some properties were missing in resource, nothing
 broke, we had our XSLTs set up in way that just the part where that
 property value should be shown - it was not shown. No ifs, no template
 logic. And you get this pretty much by default if you use XSLT
-correct.
+correctly.
 
 ## Embrace the Open Source version of this!
 
