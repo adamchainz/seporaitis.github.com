@@ -27,7 +27,7 @@ title: Julius 'Sepa' Šėporaitis
             </div>
             <div class="footer">
                 <div class="info">
-                    <p><a class="more" href="{{ first_post.url }}#disqus">Discuss</a></p>
+                    <p><a class="more" href="{{ first_post.url }}/#disqus">Discuss</a></p>
                     <p>Posted <abbr title="{{ first_post.date | date_to_long_string }}">
                             {{ first_post.date | date_to_long_string }}
                         </abbr>
