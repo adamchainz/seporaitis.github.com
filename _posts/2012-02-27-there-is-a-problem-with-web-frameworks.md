@@ -78,8 +78,8 @@ So, what did I grasp?
 
 ## There is a problem with frameworks, because
 
-They try to help me too much. I started to hate the idea of using any MVC
-Based framework. _Why?_ is a good question. Here's an answer:
+They try to help me too much. I started to hate the idea of using any
+MVC Based framework. _Why?_ is a good question. Here's an answer:
 
 Contrary to the "easy to learn" slogans, shiny documentation and easy
 examples, frameworks do not let me prototype things fast, unless I
@@ -204,12 +204,18 @@ Resource URI, a property name, and a value. For simplicity sake, a
 heavily striped down version of a resource looks like this:
 
 {% highlight text %}
-    @base <http://heltnormalt.dk>
-    </striben/2012/02/28> type Post .
-    </striben/2012/02/28> published_at "2012-02-28T00:00:00"^^dateTime .
-    </striben/2012/02/28> container </striben> .
-    </striben/2012/02/28> thumbnail </img/strip/thumb/2012/02/28.jpg> .
-    </striben/2012/02/28> depiction </img/strip/2012/02/28.jpg> .
+    @base <http://heltnormalt.dk> .
+
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix dct: <http://purl.org/dc/terms/> .
+    @prefix sioc: <http://rdfs.org/sioc/ns#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+    </striben/2012/02/28> rdf:type Post .
+    </striben/2012/02/28> dct:issued "2012-02-28T00:00:00"^^dateTime .
+    </striben/2012/02/28> sioc:has_container </striben> .
+    </striben/2012/02/28> foaf:thumbnail </img/strip/thumb/2012/02/28.jpg> .
+    </striben/2012/02/28> foaf:depiction </img/strip/2012/02/28.jpg> .
 {% endhighlight %}
 
 It is pretty straightforward and natural - every resource has an
@@ -239,13 +245,17 @@ triples with some properties and values, and leave some blanks that
 should be filled up in results. Sounds vague, but here's an example:
 
 {% highlight text %}
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1>
+    PREFIX sioc: <http://rdfs.org/sioc/ns#>
+
     CONSTRUCT {
-        ?uri type Post .
-        ?uri thumbnail ?thumbUrl .
+        ?uri rdf:type sioc:Post .
+        ?uri foaf:thumbnail ?thumbUrl .
     } WHERE {
-        ?uri type Post .
-        ?uri container <http://heltnormalt.dk/striben> .
-        ?uri thumbnail ?thumbUrl .
+        ?uri rdf:type sioc:Post .
+        ?uri sioc:has_container <http://heltnormalt.dk/striben> .
+        ?uri foaf:thumbnail ?thumbUrl .
     }
 {% endhighlight %}
 
@@ -255,14 +265,15 @@ simplified form results look like this:
 
 {% highlight xml %}
     <?xml version="1.0" encoding="utf-8"?>
-    <rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:foaf="http://xmlns.com/foaf/0.1">
         <rdf:Description rdf:about="http://heltnormalt.dk/striben/2012/02/28">
-            <type>Post</type>
-            <thumbnail rdf:resource="http://heltnormalt.dk/img/strip/thumb/2012/02/28.jpg"/>
+            <rdf:type rdf:resource="http://rdfs.com/sioc/ns#Post"/>
+            <foaf:thumbnail rdf:resource="http://heltnormalt.dk/img/strip/thumb/2012/02/28.jpg"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://heltnormalt.dk/striben/2012/02/29">
-            <type>Post</type>
-            <thumbnail rdf:resource="http://heltnormalt.dk/img/strip/thumb/2012/02/29.jpg"/>
+            <rdf:type rdf:resource="http://rdfs.com/sioc/ns#Post"/>
+            <foaf:thumbnail rdf:resource="http://heltnormalt.dk/img/strip/thumb/2012/02/29.jpg"/>
         </rdf:Description>
     </rdf:RDF>
 {% endhighlight %}
