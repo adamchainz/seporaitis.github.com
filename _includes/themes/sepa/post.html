@@ -1,40 +1,37 @@
----
-layout: default
-title: Julius 'Sepa' Šėporaitis
----
-{% include JB/setup %}
-
-{% assign first_post = site.posts.first %}
-
 <ol id="posts">
     <li class="post">
         <div class="entry">
             <div class="header">
-                <a class="date" href="{{ first_post.url }}" data-date="{{ first_post.date| date_to_xmlschema }}">
-                    <div class="top ribbon">&nbsp;</div>
-                    <div class="bottom ribbon">&nbsp;</div>
+                <a class="date" href="#" data-date="{{ page.date | date_to_xmlschema }}">
+                    <div class="top ribbon"></div>
+                    <div class="bottom ribbon"></div>
                     <div class="tail ribbon">
-                        <div class="left ribbon">&nbsp;</div>
-                        <div class="right ribbon">&nbsp;</div>
+                        <div class="left ribbon"></div>
+                        <div class="right ribbon"></div>
                     </div>
                 </a>
+                <script>
+                    $(function() {
+                    $(this).parent().find("a.date .top").html("Trololo");
+                    });
+                </script>
                 <h1 class="title">
-                    <a href="{{first_post.url}}">{{ first_post.title }}</a>
+                    <a href="#">{{ page.title }}</a>
                 </h1>
             </div>
-            <div class="content">
-                {{ first_post.content }}
-            </div>
+            <div class="content">{{ content }}</div>
             <div class="footer">
                 <div class="info">
-                    <p><a class="more" href="{{ first_post.url }}#disqus">Discuss</a></p>
-                    <p>Posted <abbr title="{{ first_post.date | date_to_long_string }}">
-                            {{ first_post.date | date_to_long_string }}
+                    <p>Posted <abbr title="{{ page.date | date_to_long_string }}">
+                            {{ page.date | date_to_long_string }}
                         </abbr>
                         by <span class="author">Julius Seporaitis</span></p>
                 </div>
             </div>
         </div>
+
+        {% include JB/comments %}
+
     </li>
     <li class="post">
         <div class="entry">

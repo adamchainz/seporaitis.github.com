@@ -203,12 +203,14 @@ Every resource in our datastore is comprises a number of triples, each of which 
 Resource URI, a property name, and a value. For simplicity sake, a
 heavily striped down version of a resource looks like this:
 
+{% highlight text %}
     @base <http://heltnormalt.dk>
     </striben/2012/02/28> type Post .
     </striben/2012/02/28> published_at "2012-02-28T00:00:00"^^dateTime .
     </striben/2012/02/28> container </striben> .
     </striben/2012/02/28> thumbnail </img/strip/thumb/2012/02/28.jpg> .
     </striben/2012/02/28> depiction </img/strip/2012/02/28.jpg> .
+{% endhighlight %}
 
 It is pretty straightforward and natural - every resource has an
 URL. Each URL (thus - resource too) can have named properties, where
@@ -236,6 +238,7 @@ pattern matching! In the query you say that you want to get some
 triples with some properties and values, and leave some blanks that
 should be filled up in results. Sounds vague, but here's an example:
 
+{% highlight text %}
     CONSTRUCT {
         ?uri type Post .
         ?uri thumbnail ?thumbUrl .
@@ -244,22 +247,25 @@ should be filled up in results. Sounds vague, but here's an example:
         ?uri container <http://heltnormalt.dk/striben> .
         ?uri thumbnail ?thumbUrl .
     }
+{% endhighlight %}
 
 A very similar query is executed when you type in address:
 http://heltnormalt.dk/striben - and you get the list of strips. In
 simplified form results look like this:
 
+{% highlight xml %}
     <?xml version="1.0" encoding="utf-8"?>
     <rdf:RDF>
         <rdf:Description rdf:about="http://heltnormalt.dk/striben/2012/02/28">
             <type>Post</type>
-            <thumbnail rdf:resource="http://heltnormalt.dk/img/strip/thumb/2012/02/28.jpg"></thumbnail>
+            <thumbnail rdf:resource="http://heltnormalt.dk/img/strip/thumb/2012/02/28.jpg"/>
         </rdf:Description>
         <rdf:Description rdf:about="http://heltnormalt.dk/striben/2012/02/29">
             <type>Post</type>
-            <thumbnail rdf:resource="http://heltnormalt.dk/img/strip/thumb/2012/02/29.jpg"></thumbnail>
+            <thumbnail rdf:resource="http://heltnormalt.dk/img/strip/thumb/2012/02/29.jpg"/>
         </rdf:Description>
     </rdf:RDF>
+{% endhighlight %}
 
 Sorry for the XML, but I promise - it is important. I hope you see how
 the pattern matching worked here. Just in case: query said "find me

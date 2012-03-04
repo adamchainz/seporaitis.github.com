@@ -9,8 +9,8 @@ pygments: true
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Julius 'Sepa' Šėporaitis
-tagline: My Backend(.lt) on things
+title : Julius Šėporaitis / Sepa
+tagline:
 author :
   name : Julius Šėporaitis
   email : julius@seporaitis.net
