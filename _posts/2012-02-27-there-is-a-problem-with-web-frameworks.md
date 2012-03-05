@@ -394,3 +394,6 @@ account, I also will try to write more about it on this new and shiny
 blog and you can always drop an email for me directly or info@graphity.org
 
 What are your thoughts on this - let's talk in comments!
+
+P.S. This essay wouldn't be real without some help and feedback from:
+Martynas, Aleksandras, Aurelijus, James and Adomas. Huge thanks, guys!
