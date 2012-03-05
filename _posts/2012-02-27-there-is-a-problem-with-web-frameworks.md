@@ -130,24 +130,48 @@ care about data transformation. Which brings me to my next idea.
 
 ## views are impostors!
 
-Yes, Views do not do what they should. Views are all about
-representing your data. When I grasped this, I was shocked yet again.
+Yes, Views do not do what they should. Views are representing your
+data, rather than presenting. This is so subtle difference, that
+didn't come to me quickly, but when I grasped this - I was shocked
+again.
 
-The view should be, in one way or another, the same data I have in my
-database, except that it is presented in the way the human eye or a
-browser script could make sense of it. Now the commonly known View
-mocks itself as the data, when actually it is a spaghetti of
-moustaches that shows only what you allowed yourself to see, not what the
-data wants to tell you!
+I'd expected view to be, in one way or another, the same data I have
+in my database, except that it is presented in the way the human eye
+or a browser script could make sense of it. However, your commonly
+known View mocks itself by _re_presenting the data using a spaghetti
+of moustaches! View is also static and tightly knit to the underlying
+Model it tries to _re_present.
+
+Here's an example: a requirement change happens for some theoretical
+website. Some theoretical engineer opens up Model code, updates
+properties and queries in accordance to new requirements and _then_
+goes on to change the View.
+
+It's quite alright to update the views with information on how to
+present new properties, but why should a View care if those properties
+are available in the data or not? It shouldn't.
 
 The alternative is The Transformation -
 [_a thorough dramatic change in form or appearance_](http://www.google.com/search?q=define:+transformation).
 
-Maybe it is hard to grasp the difference, but consider this
-metaphor: a view is like looking into something through a fancy
-key-hole; transformation is like seeing the same thing _presented_
-to you or to a script (as in JSON)  at any
-given moment in a more understandable way.
+Think of it like this: The Transformation _thingy_ knows what
+properties our data might have and how to present them. Yes yes, tiny
+snippets of code. Then you query your data, retrieve some
+properties and push them through The Transformation. What comes out?
+Data is _presented_ according to these rules.
+
+If you change the query, add or remove properties, the data is still
+presented without any change to the transformation code!
+
+I know, the difference might seem very subtle, but the implications
+are significant.
+
+You can also consider this metaphor: a View here is like looking
+through a window in a picture - you will see the same thing until you
+make another image of the same window from a different perspective. A
+transformation, on the other hand, is like looking directly through
+the window and seeing a different view as you smoothly change your
+perspective.
 
 ## How it should work.
 
@@ -181,7 +205,7 @@ one, LOC: 614.
 
 Less code - fewer bugs.
 
-The Model/Query difference comes mainly from our ORM. we used Propel,
+The Model/Query difference comes mainly from our ORM. We used Propel,
 which generated a lot of code. You might ask, what's the _Query_ thing?
 Well, we don't have models - but we do query the data. The point is,
 because our data is autonomous, we need only to query for the
@@ -350,10 +374,6 @@ being a little bit off, when sitting next to
 listening to other bunch of great people talking about this great
 technology and drafting the guidelines for it's future.
 
-If someone had told me couple of years ago: "Dude, you gonna visit MIT
-and present your stuff to TBL." - I would have slapped that someone
-and said "Wake up!" :-) That how unbelievable it looked like.
-
 If you are interested in the paper we wrote, it has more
 comparative information how this approach differs from todays common
 practice in web development. Read it here:
@@ -374,5 +394,3 @@ account, I also will try to write more about it on this new and shiny
 blog and you can always drop an email for me directly or info@graphity.org
 
 What are your thoughts on this - let's talk in comments!
-
-The End :-)
