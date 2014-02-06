@@ -1,0 +1,35 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Julius Šėporaitis / Sepa
+tagline:          'Musings about software engineering'
+description:      'I write about software engineering related stuff.'
+url:              http://seporaitis.net
+
+author:
+  name:           'Julius Šėporaitis'
+  email:          'julius@seporaitis.net'
+  github:         'seporaitis'
+  twitter:        'seporaitis'
+  feedburner:     'seporaitis'
+  flickr:         'seporaitis'
+  linkedin:       'seporaitis'
+#  url:            https://twitter.com/seporaitis
+
+paginate:         5
+
+# Custom vars
+version:          1.0.0
+
+github:
+  repo:           https://github.com/seporaitis/seporaitis.github.com
+
+analytics :
+  provider : google
+  google :
+    tracking_id : 'UA-130302-4'
