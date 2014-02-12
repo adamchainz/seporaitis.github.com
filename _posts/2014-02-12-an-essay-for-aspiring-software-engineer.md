@@ -15,10 +15,10 @@ universities are teaching. Some of the bits apply only to situation in
 Lithuania, but I think the main point I tried to make is universal._
 
 It all started with another blog post written by a person, who had
-studied computer science, does not work as a programmer, but works in
-IT. I thought that I could walk through similar points she makes,
-providing my perspective, because I also work in IT and as they say -
-"I have seen some things."
+studied computer science, does not work as a programmer, but has
+career in IT. I thought that I could walk through similar points she
+makes, providing my perspective, because I also work in IT and as they
+say - "I have seen some things."
 
 ## Questions
 
