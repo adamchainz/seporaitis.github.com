@@ -49,15 +49,15 @@ them interchangeably here).
 him/her-self.
 
 When you look through this perspective - it is not important anymore
-if web or desktop programming jobs are better, but rather what problem
-a person _wants_ and is able to solve efficiently. If you're just
-starting out - internet is full of helpful resources, e.g. look for
-engineering blogs of tech companies[\[1\]](#footnotes-20140211). Blogs
-full of articles about problems they were having and how they solved
-them. Read and learn! Get some perspective. If you are able to solve
-the same problem more effectively - you are guaranteed a job. If
-multiple companies are having the same problem - _maybe_ it is time to
-think about a startup.
+whether web or desktop programming jobs are better, but rather what
+problem a person _wants_ and is able to solve efficiently. If you're
+just starting out - internet is full of helpful resources, e.g. look
+for engineering blogs of tech
+companies[\[1\]](#footnotes-20140211). Blogs full of articles about
+problems they were having and how they solved them. Read and learn!
+Get some perspective. If you are able to solve the same problem more
+effectively - you are guaranteed a job. If multiple companies have the
+same problem - _maybe_ it is time to think about a startup.
 
 
 Any technology you can think of is only a tool in developer hands,
@@ -77,7 +77,7 @@ Sometimes, however, even importance of all available tools fade away
 in the light of someones ability to squeeze a maximum out of a single
 one. There are people[\[2\]](#footnotes-20140211), who are solving
 problems with Excel and/or Visual Basic (stereotypically an inferior
-language). I know at least one in person. And you know what... noone
+language). I know at least one in person. And you know what... no one
 could beat them at what they do. Why? Switching would be too costly or
 breaking a human habit (users) - too hard[\[3\]](#footnotes-20140211).
 
@@ -89,15 +89,15 @@ of talent and boasting the size of income, which is usually couple of
 times than average monthly wage in Lithuania. Also, about universities
 agreeing on this agenda to boost number of student applications,
 because unis in Lithuania benefit from something called "student
-basked" - an amount of money they get for a single student. This,
-supposedly, had to increase the quality of studies. Politics; don't
-even ask to explain this logic..._
+basket" - an amount of money they get for a single student. This,
+supposedly, had to increase the quality of studies. Don't ask to
+explain..._
 
 Marketing is good and I will repeat the message - there is a lack of
 software engineers. Not any engineers, but those who are able to
 understand the scope and context of a problem, come up with a sensible
 solution and write source code to make computers (even thousands of
-them) and solve that problem in an automated and efficient manner.
+them) solve that problem in an automated and efficient manner.
 
 Companies, who are not picky enough about their engineers, often do
 not understand the cost[\[4\]](#footnotes-20140211).
@@ -110,18 +110,18 @@ company will hire only 1 out of 10. _Best case._
 In Silicon Milkroundabout[\[5\]](#footnotes-20140210) I had a chat
 with a colleague working at StackExchange (Disclaimer: I do not work
 for SE, but I call all engineers my colleagues). He said they hire
-less than ten out of hundred applicants. I couldn't believe it,
-however the process is fined tuned to take only the best: a short call
-to acquaint with a candidate, a longer technical call, if there are
-doubts - another one, finaly you're invited on-site for even more
-technical interviews, sometimes lasting throughout a day.
+less than ten out of hundred applicants. I couldn't believe it at
+first, but the process is fine tuned to filter out only the best: a
+short call to acquaint with a candidate, a longer technical call, if
+there are doubts - another one, finaly you're invited on-site for even
+more technical interviews, sometimes lasting throughout a day.
 
 On the other hand - universities are educating knowledge synthesizers
 and (ideally) - inovators. Before applying to university, a person
 must understand that there is not enough demand for that many people
 with higher education. (There is this absurd belief in my country,
-arguably a soviet relict embedded in parents generation and they are
-pushing it further, that if you do not have diploma - you are
+arguably a soviet relict embedded in my parents generation and they
+are pushing it further, that if you do not have diploma - you are
 worthless and won't get a job.) For instance, some of my friends do
 not have a formal higher education in anything, but they are
 developing amazing things. I also had a chance to do an interview with
@@ -130,13 +130,14 @@ programming career. While I might not approve such approach, I was
 impressed with his ability to come up with optimal solutions to my
 questions and followups, almost immediately. On the other end of the
 spectrum - some friends knew nothing about programming before uni and
-now are successful at software engineering.
+now are on a successful at software engineering career track.
 
 Even better, when you are not a programmer by education, but know how
-to do it. I first heard this from a Clojure enthusiast in Copehagen -
-he quoted Zed Shaw[\[6\]](#footnotes-20140211). I had to hold my jaw
-closed when I found out who he was. General counsel at the worlds
-biggest shipping company - by day, Clojure hacker by night.
+to do it. I first heard this from a programming enthusiast in
+Copehagen - he had quoted Zed Shaw[\[6\]](#footnotes-20140211). Later,
+I had to hold my jaw closed when I found out who he was: general
+counsel at the worlds biggest shipping company - by day, Clojure
+hacker by night.
 
 
 ## Studies
@@ -147,14 +148,14 @@ article, but I'll try my best to give context._
 "Universities lag behind business business requirements." (This phrase
 is almost ubiquitous between students and businesses in Lithuania.)
 But following this logic it would mean that universities are training
-engineers almost for any business - be it template website "bakers" to
-banking systems providers. **NO.** Like
+engineers almost for any business - be it template website "bakers" or
+banking systems providers. **NO.** Like,
 [this](https://www.youtube.com/watch?v=31g0YE61PLQ) NO!
 
 Look:
 
-> Universities must prepare knowledge synthesizers who are able
-> to solve _unique_ business problems, by doing research.
+> Universities must prepare knowledge synthesizers who are, able to
+> solve _unique_ business problems.
 
 Following this heuristic - it is the businesses that lag behind. It
 isn't bad - some of them do not need brain-picking bespoke solutions.
@@ -164,7 +165,7 @@ and ready to work on the next big thing, one finally is tasked to mash
 together a website using a template and a CMS. That is why I felt
 cheated, didn't write my thesis and dropped out after four(!) years. I
 completely lacked motivation and often sang the quote I started this
-section with. Took me couple of years and career steps, until I
+section with. Took me couple of years, and career steps, until I
 understood what I missed, and I am fixing this mistake at my own
 expense now.
 
@@ -172,14 +173,14 @@ This next quote (about curriculum) also resonated with me:
 
 _However, you are forced to write a compiler, because "what if you'll
 need to write one." Maybe you could add aircraft flying to the
-syllabus? In case the whole crew passes out during a flight. You know,
+curriculum? In case the whole crew passes out during a flight. You know,
 just in case._
 
 It resonated with me, because once I was singing the same song - why
 the heck would I need to "write an operating system", dig into
-"computer architecture" or how "computer networks" work? All operating
-systems are written too hard to comprehend for newbie, no new
-mainstream computers were invented recently
+"computer architecture" or how "computer networks" at a low level
+work? All operating systems are written too hard to comprehend for
+newbie, no new mainstream computers were invented recently
 (except[\[7\]](#footnotes-20140211)) and there are networking
 libraries ready to be used.
 
@@ -203,17 +204,17 @@ there's a programming language and compiler or interpreter, nothing
 out of ordinary, but if something is not working - it becomes a
 language limitation, it is compiler fault or interpreter performance
 issue. This is where all the problems hide from ignorance and
-incompetence - the bliss.
+incompetence - this is the bliss.
 
 > Software engineer efficiency is limited to the depth of
 > understanding his/hers stack.
 
 Sounds intuitive enough - if a developer only knows how to use a
-framework, all his optimizations will be limited by that framework
-(afterwards - the bliss). If engineer knows only his language, all his
-optimizations will be limited by the language ability. If, after
-everything else, they also know language internals - they are are
-competent enough to conciously write the most efficient code.
+framework, his efficiency will be limited by that framework. If
+engineer knows only his language, all optimizations will be limited by
+the language features. If, after everything else, they also know
+language internals - they are are competent enough to conciously write
+the most efficient code.
 
 If you ever dreamt of working at companies like Facebook (or build
 one), think of the problems they were having - Facebook website code
