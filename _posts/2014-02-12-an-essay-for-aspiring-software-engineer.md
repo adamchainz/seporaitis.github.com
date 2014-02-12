@@ -249,6 +249,9 @@ solve. It doesn't need to be grandiose - solve one for yourself, your
 family or friends. And if you got hooked - continue, you are on the
 right path.
 
+Hope you liked this article, please do
+[comment or upvote on Hacker News](https://news.ycombinator.com/item?id=7223824).
+
 
 <a name="footnotes-20140211"></a>
 
