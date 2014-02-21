@@ -24,7 +24,7 @@ and
 [leaky abstractions](http://en.wikipedia.org/wiki/Leaky_abstraction). We
 made [Graphity](http://github.com/graphity/graphity-core) - an
 open-source project. Read our position paper for W3C workshop
-[here](http://graphity.github.com/position_paper.pdf)._
+[here](http://www.w3.org/2011/09/LinkedData/ledp2011_submission_1.pdf)._
 
 First things first. In the summer of 2011 I was working, among couple
 of other things, on a website called
@@ -376,7 +376,7 @@ technology and drafting the guidelines for it's future.
 If you are interested in the paper we wrote, it has more
 comparative information how this approach differs from todays common
 practice in web development. Read it here:
-[_"Graphity - A Generic Linked Data Framework"_](http://graphity.github.com/position_paper.pdf).
+[_"Graphity - A Generic Linked Data Framework"_](http://www.w3.org/2011/09/LinkedData/ledp2011_submission_1.pdf).
 
 ## We invite you to collaborate!
 
