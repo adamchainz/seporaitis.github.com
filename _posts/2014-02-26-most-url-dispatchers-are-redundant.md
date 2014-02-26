@@ -228,42 +228,10 @@ Fast forward to this day and adding a new url to application level code
 seems normal, because hey - all the frameworks and libraries do that.
 
 
-## Possibilities
+## What now?
 
-_From here on I have Python & WSGI (or alternatives) in mind._
-
-
-**1. Easy streaming with generators**
-
-Consider this - WSGI standard (PEP333[\[9\]](#url-dispatch-footnotes))
-incepted late 2003. Django started in 2005. Django "added" support for
-`StreamingHTTPResponse` only since 1.5 (released February 26th,
-2013[\[10\]](#url-dispatch-footnotes)). You had it for 10 years, but
-didn't knew or hacked around it.
-
-And it's not that I want to beat Django - I use it at work - but this
-sort of mismatch between what you can do and what your framework
-allows you to do is the biggest desease that any framework forces into
-mindset of its users.
-
-But yeah, maybe this is not an everyday usable feature.
-
-
-**2. Horizontally reusable plugins.**
-
-How many middlewares from framework/library X you can reuse in
-framework Y? I thought so. You're locked in. With cleanly defined
-interfaces and no code, however, you can have authentication
-middleware that you can reuse anywhere. How it'd look? A plain
-decorator.
-
-
-## Summary
-
-
-_Write summary_.
-
-
+Honestly, I do not know, but I will continue to tinker this idea
+further. What do you think?
 
 
 
@@ -287,7 +255,3 @@ methods are supported and not Authorization or Authentication.
 even then it is cached on webserver for performance reasons.
 
 [8]: Be it WSGI or [Pump](http://adeel.github.io/pump/).
-
-[9]: [PEP-0333](http://www.python.org/dev/peps/pep-0333/), revised [PEP-3333](http://www.python.org/dev/peps/pep-3333/)
-
-[10]: [Django page on Wikipedia](http://en.wikipedia.org/wiki/Django_(web_framework\)#Versions)
