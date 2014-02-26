@@ -231,7 +231,7 @@ seems normal, because hey - all the frameworks and libraries do that.
 ## What now?
 
 Honestly, I do not know, but I will continue to tinker this idea
-further. What do you think?
+further. What do you think? (Discussion on [HackerNews](https://news.ycombinator.com/item?id=7306429)).
 
 
 
