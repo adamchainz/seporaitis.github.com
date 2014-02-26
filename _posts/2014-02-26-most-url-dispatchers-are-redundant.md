@@ -238,7 +238,7 @@ further. What do you think?
 <a name="url-dispatch-footnotes"></a>
 **Footnotes:**
 
-[1]: Django url resolver.
+[1]: I beleive Django [url resolver](https://github.com/django/django/blob/master/django/core/urlresolvers.py) considers every pattern as regex.
 
 [2]: I believe [Pyramid](https://github.com/Pylons/pyramid/blob/master/pyramid/traversal.py) traverse does that.
 
