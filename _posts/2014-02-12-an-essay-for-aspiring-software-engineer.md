@@ -8,7 +8,7 @@ _This article was originally posted in my Lithuanian (native tongue)
 blog and was received quite well among my colleague software engineers
 as well as non-technical friends. It was meant as an answer to a
 different blog post complaining about: aspiring programmers asking
-wrong questions about career bootstrapping, businessess and
+wrong questions about career bootstrapping, businesses and
 universities marketing constant lack of talent (encouraging too much
 people to study IT related fields) and all the worthless stuff the
 universities are teaching. Some of the bits apply only to situation in
@@ -43,12 +43,12 @@ However, I can give you one question with a constant right answer -
 who is a programmer? (software engineer & developer too - I'm using
 them interchangeably here).
 
-> Programmer is a person, efficiently solving someone elses problem(s).*
+> A programmer is a person, efficiently solving someone else's problem(s).*
 
 \* With each solved problem programmer is creating at least one for
 him/her-self.
 
-When you look through this perspective - it is not important anymore
+When you look through this perspective - it is not important any more
 whether web or desktop programming jobs are better, but rather what
 problem a person _wants_ and is able to solve efficiently. If you're
 just starting out - internet is full of helpful resources, e.g. look
@@ -74,7 +74,7 @@ enthusiastic about it, yet they have enough grit to follow this truth
 and keep their skillset up-to-date.
 
 Sometimes, however, even importance of all available tools fade away
-in the light of someones ability to squeeze a maximum out of a single
+in the light of someone's ability to squeeze a maximum out of a single
 one. There are people[\[2\]](#footnotes-20140211), who are solving
 problems with Excel and/or Visual Basic (stereotypically an inferior
 language). I know at least one in person. And you know what... no one
@@ -113,11 +113,11 @@ for SE, but I call all engineers my colleagues). He said they hire
 less than ten out of hundred applicants. I couldn't believe it at
 first, but the process is fine tuned to filter out only the best: a
 short call to acquaint with a candidate, a longer technical call, if
-there are doubts - another one, finaly you're invited on-site for even
+there are doubts - another one, finally you're invited on-site for even
 more technical interviews, sometimes lasting throughout a day.
 
 On the other hand - universities are educating knowledge synthesizers
-and (ideally) - inovators. Before applying to university, a person
+and (ideally) - innovators. Before applying to university, a person
 must understand that there is not enough demand for that many people
 with higher education. (There is this absurd belief in my country,
 arguably a soviet relict embedded in my parents generation and they
@@ -125,16 +125,16 @@ are pushing it further, that if you do not have diploma - you are
 worthless and won't get a job.) For instance, some of my friends do
 not have a formal higher education in anything, but they are
 developing amazing things. I also had a chance to do an interview with
-a guy who, from the looks of it, dropped out of school to pursuit a
+a guy who, from the looks of it, dropped out of school to pursue a
 programming career. While I might not approve such approach, I was
 impressed with his ability to come up with optimal solutions to my
-questions and followups, almost immediately. On the other end of the
+questions and follow-ups, almost immediately. On the other end of the
 spectrum - some friends knew nothing about programming before uni and
 now are on a successful at software engineering career track.
 
 Even better, when you are not a programmer by education, but know how
 to do it. I first heard this from a programming enthusiast in
-Copehagen - he had quoted Zed Shaw[\[6\]](#footnotes-20140211). Later,
+Copenhagen - he had quoted Zed Shaw[\[6\]](#footnotes-20140211). Later,
 I had to hold my jaw closed when I found out who he was: general
 counsel at the worlds biggest shipping company - by day, Clojure
 hacker by night.
@@ -145,7 +145,7 @@ hacker by night.
 _Disclaimer: this part is heavily based on quotes from that other
 article, but I'll try my best to give context._
 
-"Universities lag behind business business requirements." (This phrase
+"Universities lag behind business requirements." (This phrase
 is almost ubiquitous between students and businesses in Lithuania.)
 But following this logic it would mean that universities are training
 engineers almost for any business - be it template website "bakers" or
@@ -207,13 +207,13 @@ issue. This is where all the problems hide from ignorance and
 incompetence - this is the bliss.
 
 > Software engineer efficiency is limited to the depth of
-> understanding his/hers stack.
+> understanding his/her stack.
 
 Sounds intuitive enough - if a developer only knows how to use a
-framework, his efficiency will be limited by that framework. If
+framework, his efficiency will be limited by that framework. If an
 engineer knows only his language, all optimizations will be limited by
 the language features. If, after everything else, they also know
-language internals - they are are competent enough to conciously write
+language internals - they are competent enough to consciously write
 the most efficient code.
 
 If you ever dreamt of working at companies like Facebook (or build
@@ -222,7 +222,7 @@ was too slow. Rewriting 9.2mln[\[8\]](#footnotes-20140211) lines of
 code without stalling every day progress - is an abysmal
 step[\[9\]](#footnotes-20140211). What else? Either buy a thousand
 more servers or rewrite the underlying language interpreter into a
-compiler. They successfuly managed to do exactly
+compiler. They successfully managed to do exactly
 that[\[10\]](#footnotes-20140211). For the same purpose, they
 redefined how data centers are built - hardware and
 software[\[11\]](#footnotes-20140211). I am doubtless - engineers who
@@ -235,11 +235,11 @@ are talking about tens or hundreds of thousands of servers, generating
 Facebook wall for all of us.
 
 
-# Finaly
+# Finally
 
 I think I used different arguments to tell the same idea as in the
 other article. It doesn't rain gold bricks for a software engineer. On
-the contrary - work is full of intesive brain picking and, often, very
+the contrary - work is full of intensive brain picking and, often, very
 little reward, because with every problem solved you have a new one
 for yourself - maintain the code. It all depends on problem solving
 skills and understanding of the toolkit, whether you're going to do
